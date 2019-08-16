@@ -1,23 +1,35 @@
 package com.example.test_springboot.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
 
 @CrossOrigin //다른 도메인에 있는 API를 호출 시 선언
 @RestController
-
 public class RestWSController {
- @RequestMapping(value = "/ws/organization")
- public Object actionMethod() {
-    Map<String, Object> resultObject = new HashMap<String, Object>();
-    resultObject.put("MEMBER_ID","293029301202");
-    resultObject.put("CELLPHONE","001-3923-6940");
-    resultObject.put("COUNTRY_CODE","+82");
-    
-    return resultObject;
- }
+   @Autowired
+   // restReturnlist restReturnlist1;
+   // @RequestMapping(value = "ws/OrganizationList")
+
+   //RestAjaxController RestAjaxController1;
+   //@RequestMapping(value = "/api/ajax", method = RequestMethod.POST)
+   
+   // public Object actionMethod(){
+   //    Object resultObject = new Object();
+   //    resultObject = RestAjaxController1.actionMethod();
+   //    return resultObject;
+
+   // }
+
+   public Object getParmWithAjax(){
+      Object resultObject = new Object();
+      // resultObject = RestAjaxController1.getParmWithAjax(paramMap);
+      return resultObject;
+
+   }
+
+   
 }
